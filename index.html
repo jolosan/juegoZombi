@@ -25,6 +25,7 @@
 
     <script>
       var mapa_zombi;
+      var todos_los_marcadores = [];
       var puntuacion = 0;
       var tolerancia = 10;
       var posicion_antigua;    
@@ -91,8 +92,9 @@
  		var marcador = new google.maps.Marker({
               position: ubicacion,
               map: mapa_zombi,
-			  icon: emoji
+              icon: emoji
             });
+	      todos_los_marcadores.push(marcador);
 		//console.log(ubicacion.lat()+" "+ubicacion.lng()+" "+emoji);
 	  }
       
@@ -114,6 +116,7 @@
 			map: mapa_zombi,
 			icon: "./iconos/zombi.png"
             });
+		todos_los_marcadores.push(marcador);
 		}
 
 		// crea armas
@@ -129,6 +132,7 @@
 			map: mapa_zombi,
 			icon: "./iconos/armas.png"
             });
+		todos_los_marcadores.push(marcador);
 		}
 
 		// crea hospitales
@@ -143,6 +147,7 @@
 			map: mapa_zombi,
 			icon: "./iconos/hospital.png"
             });
+		todos_los_marcadores.push(marcador);
 		}
 
 	  }
