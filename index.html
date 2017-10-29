@@ -17,9 +17,9 @@
 	</div>
     <form>
 		<select id="icono_a_usar">
-  			<option value="iconos/zombi.png">Zombi</option>
-  			<option value="iconos/hospital.png">Hospital</option>
-			<option value="iconos/armas.png">Armas</option>
+  			<option value="./iconos/zombi.png">Zombi</option>
+  			<option value="./iconos/hospital.png">Hospital</option>
+			<option value="./iconos/armas.png">Armas</option>
 		</select>
 	  </form>
 
@@ -38,7 +38,7 @@
 		mapa_zombi.addListener('click', function(e) {
 			var ubicacion = e.latLng;
   			ponMarcador(ubicacion);
-            console.log("Ubicacion: "+e.latLng);
+            //console.log("Ubicacion: "+e.latLng);
 			});
       
 		if(navigator.geolocation) {
@@ -54,7 +54,7 @@
          var marcador = new google.maps.Marker({
               position: pos,
               map: mapa_zombi,
-			  icon: "iconos/jugador.png"
+			  icon: "./iconos/jugador.png"
             });
 
 	  }
@@ -85,7 +85,7 @@
 			marcador = new google.maps.Marker({
 			position: ubicaciones_zombis[coordenadas],
 			map: mapa_zombi,
-			icon: "iconos/zombi.png"
+			icon: "./iconos/zombi.png"
             });
 		}
 
@@ -100,7 +100,7 @@
 			marcador = new google.maps.Marker({
 			position: ubicaciones_armas[coordenadas],
 			map: mapa_zombi,
-			icon: "iconos/armas.png"
+			icon: "./iconos/armas.png"
             });
 		}
 
@@ -114,7 +114,7 @@
 			marcador = new google.maps.Marker({
 			position: ubicaciones_hospitales[coordenadas],
 			map: mapa_zombi,
-			icon: "iconos/hospital.png"
+			icon: "./iconos/hospital.png"
             });
 		}
 
